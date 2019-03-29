@@ -1,0 +1,89 @@
+﻿@model Apolice.Web.Models.ApoliceModel
+@{
+    ViewBag.Title = "Adicionar ou Alterar Apólice";
+}
+
+
+<div class="book-example panel panel-primary">
+    <div class="panel-heading panel-head">Adicionar / Editar Apólice</div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            <div class="form-horizontal">
+                @Html.Raw(HttpUtility.HtmlDecode((Html.ValidationSummary(false, "", new { @class = "text-danger" })).ToHtmlString()))
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NumeroApolice, new { @class = "col-lg-2 control-label" })
+                    <div class="col-lg-9">
+                        @if (Model.ID == 0)
+                        {
+                            @Html.TextBoxFor(model => model.NumeroApolice, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.NumeroApolice, "", new { @class = "text-danger" })
+                        }
+                        else
+                        {
+                            @Html.HiddenFor(model => model.NumeroApolice)
+                            @Html.DisplayFor(model => model.NumeroApolice, new { @class = "form-control" })
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CpfCnpj, new { @class = "col-lg-2 control-label" })
+                    <div class="col-lg-9">
+                        @Html.TextBoxFor(model => model.CpfCnpj, new { @class = "form-control", maxlength = 20 })
+                        @Html.ValidationMessageFor(model => model.CpfCnpj, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PlacaVeiculo, new { @class = "col-lg-2 control-label" })
+                    <div id="passageiros" class="col-lg-9">
+                        @Html.TextBoxFor(model => model.PlacaVeiculo, new { @class = "form-control", maxlength = 7 })
+                        @Html.ValidationMessageFor(model => model.PlacaVeiculo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ValorPremio, new { @class = "col-lg-2 control-label" })
+                    <div class="col-lg-9">
+                        @Html.TextBoxFor(model => model.ValorPremio, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ValorPremio, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-9"></div>
+                    <div class="col-lg-3">
+                        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+                        <button class="btn btn-success" id="btnSubmit" type="submit">
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(document).ready(function () {
+            $('select').on('change', function () {
+                //alert(this.value);
+                //debugger;
+                switch (this.value) {
+                    case "1":
+                        $("#passageiros").html("2");
+                        break;
+                    case "2":
+                        $("#passageiros").html("42");
+                        break;
+                    default:
+                        $("#passageiros").html("0");
+                        break;
+                }
+            });
+        });
+    </script>
+
+}

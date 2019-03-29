@@ -1,0 +1,14 @@
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Service.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Service.pdb
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Model.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Repository.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\EntityFramework.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Model.pdb
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Repository.pdb
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\Apolice.Repository.dll.config
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\bin\Debug\EntityFramework.xml
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\obj\Debug\Apolice.Service.csprojAssemblyReference.cache
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\obj\Debug\Apolice.Service.csproj.CoreCompileInputs.cache
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\obj\Debug\Apolice.Service.csproj.CopyComplete
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\obj\Debug\Apolice.Service.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Service\obj\Debug\Apolice.Service.pdb

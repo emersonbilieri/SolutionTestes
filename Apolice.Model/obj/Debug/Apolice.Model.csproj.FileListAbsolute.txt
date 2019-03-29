@@ -1,0 +1,5 @@
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Model\bin\Debug\Apolice.Model.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Model\bin\Debug\Apolice.Model.pdb
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Model\obj\Debug\Apolice.Model.csproj.CoreCompileInputs.cache
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Model\obj\Debug\Apolice.Model.dll
+C:\Users\b1204640\Downloads\SolutionTeste-master\Apolice.Model\obj\Debug\Apolice.Model.pdb

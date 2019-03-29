@@ -1,0 +1,53 @@
+﻿@model Apolice.Web.Models.ApoliceModel
+
+@{
+    ViewBag.Title = "Apólice";
+}
+
+<div class="book-example panel panel-primary">
+    <div class="panel-heading panel-head">Apólice</div>
+    <div class="panel-body">
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.NumeroApolice, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.NumeroApolice, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CpfCnpj, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.CpfCnpj, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PlacaVeiculo, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.PlacaVeiculo, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ValorPremio, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.ValorPremio, new { @class = "form-control" })
+                </div>
+            </div>            
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-9">
+                        @Html.ActionLink("Editar", "SaveOrEdit", new { id = ViewContext.RouteData.Values["id"] }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-success" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

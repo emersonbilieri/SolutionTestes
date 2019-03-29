@@ -1,0 +1,65 @@
+﻿@*@model IEnumerable<Apolice.Web.Models.ApoliceModel>*@
+@model PagedList.IPagedList<Apolice.Web.Models.ApoliceModel>
+    @using PagedList.Mvc
+
+
+    <div class="book-example panel panel-primary">
+        <div class="panel-heading panel-head">
+            Listagem de Apólices
+        </div>
+
+        <div class="panel-body">
+            <a id="createEditBookModal" href="@Url.Action("SaveOrEdit")" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span> Apólice
+            </a>
+            <table class="table" style="margin: 4px">
+                <tr>
+                    <th>
+                        @Html.ActionLink("Número da Apólice", "Index", new { sortOrder = ViewBag.NumeroParam })
+                    </th>
+                    <th>
+                        @Html.DisplayName("CPF/CNPJ")
+                    </th>
+                    <th>
+                        @Html.ActionLink("Placa do Veículo", "Index", new { sortOrder = ViewBag.PlacaParam })
+                    </th>
+                    <th>
+                        @Html.DisplayName("Valor do Premio")
+                    </th>
+                    <th>
+                    </th>
+
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumeroApolice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CpfCnpj)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PlacaVeiculo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValorPremio)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "SaveOrEdit", new { id = item.ID }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Visualizar", "Detail", new { id = item.ID }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Excluir", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+            <div>
+                Página @Model.PageNumber de @Model.PageCount
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+            </div>
+        </div>
+    </div>
+
+

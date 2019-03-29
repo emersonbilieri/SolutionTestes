@@ -1,0 +1,55 @@
+﻿@model Apolice.Web.Models.ApoliceModel
+
+@{
+    ViewBag.Title = "Excluir Apólice";
+}
+
+<div class="book-example panel panel-primary">
+    <div class="panel-heading panel-head">Excluir Apólice</div>
+    <div class="panel-body">
+        <h3>Deseja realmente excluir essa Apólice?</h3>
+        <h1>@ViewBag.ErrorMessage</h1>
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.NumeroApolice, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.NumeroApolice, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CpfCnpj, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.CpfCnpj, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PlacaVeiculo, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.PlacaVeiculo, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ValorPremio, new { @class = "col-lg-2 control-label" })
+                <div class="col-lg-9">
+                    @Html.DisplayFor(model => model.ValorPremio, new { @class = "form-control" })
+                </div>
+            </div>
+
+            
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-9">
+                        <input type="submit" value="Excluir" class="btn btn-danger" />
+                        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-success" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
